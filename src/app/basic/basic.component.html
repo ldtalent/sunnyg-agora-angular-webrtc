@@ -1,0 +1,38 @@
+<div class="container-fluid banner">
+  <p class="banner-text">Video Call</p>
+</div>
+
+<div class="container">
+
+  <form id="join-form" name="join-form" class="mt-4">
+    <!-- Input Field -->
+    <div class="row join-info-group">
+      <div class="col-sm">
+        <p class="join-info-text">Join call</p>
+        <!-- <input id="channel" type="text" placeholder="Enter Channel Name" required class="form-control"> -->
+      </div>
+    </div>
+    <!-- UI Controls -->
+    <div class="button-group mt-3">
+      <button id="join" type="submit" class="btn btn-live btn-sm" (click)="startCall()">Join</button>
+      <button id="mic-btn" type="button" class="btn btn-live btn-sm" [disabled]="this.hideBtns">
+        <i id="mic-icon" class="fas fa-microphone"></i>
+      </button>
+      <button id="leave" type="button" class="btn btn-live btn-sm" [disabled]="this.hideBtns" (click)="logout()">Leave</button>
+    </div>
+  </form>
+
+  <!-- Streams -->
+  <div class="row video-group">
+    <div class="col">
+      <p id="local-player-name" class="player-name"></p>
+      <div id="local-player" class="player"></div>
+    </div>
+    <div class="w-100">Remote Users</div>
+    <div class="col" *ngFor="let i of stream.remoteUsers">
+      <div id="{{ 'remote-playerlist' + i.uid}}" class="ui centered medium image" style="  width: 200px;
+      height: 200px;">{{i.name}}</div>
+    </div>
+  </div>
+
+</div>

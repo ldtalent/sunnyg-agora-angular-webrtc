@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "video-app"
+  "defaultProject": "video-app",
+  "cli": {
+    "analytics": false
+  }
 }
