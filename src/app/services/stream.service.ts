@@ -1,6 +1,8 @@
+import { HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import AgoraRTC, { IAgoraRTCClient, LiveStreamingTranscodingConfig, ICameraVideoTrack, IMicrophoneAudioTrack, ScreenVideoTrackInitConfig, VideoEncoderConfiguration, AREAS, IRemoteAudioTrack, ClientRole } from "agora-rtc-sdk-ng"
 import { BehaviorSubject } from 'rxjs';
+import { ApiService } from './api.service';
 @Injectable({
   providedIn: 'root'
 })
@@ -21,18 +23,12 @@ export class StreamService {
   remoteUsers: IUser[] = [];       // To add remote users in list
   updateUserInfo = new BehaviorSubject<any>(null); // to update remote users name
 
-  constructor() { }
+  constructor(public api: ApiService) { }
 
   createRTCClient() {
     this.rtc.client = AgoraRTC.createClient({ mode: "rtc", codec: "h264" });
-    // this.rtc.client = AgoraRTC.createClient({ mode: "rtc", codec: "h264" , role: 'audience'});
   }
-  // comment it if you don't want virtual camera
-  async switchCamera(label, localTracks) {
-    let cams = await AgoraRTC.getCameras(); //  all cameras devices you can use
-    let currentCam = cams.find(cam => cam.label === label);
-    await localTracks.setDevice(currentCam.deviceId);
-  }
+
 
   // To join a call with tracks (video or audio)
   async localUser(token, uuid) {
@@ -44,10 +40,8 @@ export class StreamService {
     this.rtc.localVideoTrack = await AgoraRTC.createCameraVideoTrack({
       encoderConfig: "120p",
     });
-    // comment it if you want to use your camera
-    this.switchCamera('OBS Virtual Camera', this.rtc.localVideoTrack)
+
     // Publish the local audio and video tracks to the channel.
-    // this.rtc.localAudioTrack.play();
     this.rtc.localVideoTrack.play("local-player");
     // channel for other users to subscribe to it.
     await this.rtc.client.publish([this.rtc.localAudioTrack, this.rtc.localVideoTrack]);
@@ -94,6 +88,22 @@ export class StreamService {
     // Leave the channel.
     await this.rtc.client.leave();
 
+  }
+
+  // rtc token
+  async generateTokenAndUid(uid) {
+
+    let url = 'https://test-agora.herokuapp.com/access_token?';
+    const opts = { params: new HttpParams({ fromString: "channel=test&uid=" + uid }) };
+    const data = await this.api.getRequest(url, opts.params).toPromise();
+    return { 'uid': uid, token: data['token'] }
+
+  }
+
+  generateUid() {
+    const length = 5;
+    const randomNo = (Math.floor(Math.pow(10, length - 1) + Math.random() * 9 * Math.pow(10, length - 1)));
+    return randomNo;
   }
 
 

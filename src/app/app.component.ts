@@ -8,12 +8,9 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'video-app';
-  hide = true;
-  constructor(private router: Router){
+
+  constructor(){
 
   }
-  open(value){
-    this.router.navigate([`/user/${value}`]);
-    this.hide = false;
-  }
+
 }

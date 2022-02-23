@@ -20,8 +20,8 @@ export class BasicComponent implements OnInit {
   }
 
   async startCall() {
-      const uid = this.generateUid();
-      const rtcDetails = await this.generateTokenAndUid(uid);
+      const uid = this.stream.generateUid();
+      const rtcDetails = await this.stream.generateTokenAndUid(uid);
       this.stream.createRTCClient();
       this.stream.agoraServerEvents(this.stream.rtc);
       await this.stream.localUser(rtcDetails.token, uid);
@@ -29,21 +29,7 @@ export class BasicComponent implements OnInit {
       this.hideBtns = false;
   }
 
-// rtc token
-  async generateTokenAndUid(uid) {
-    // https://test-agora.herokuapp.com/access_token?channel=test&uid=1234
-    let url = 'https://test-agora.herokuapp.com/access_token?';
-    const opts = { params: new HttpParams({ fromString: "channel=test&uid=" + uid }) };
-    const data = await this.api.getRequest(url, opts.params).toPromise();
-    return { 'uid': uid, token: data['token'] }
 
-  }
-
-  generateUid() {
-    const length = 5;
-    const randomNo = (Math.floor(Math.pow(10, length - 1) + Math.random() * 9 * Math.pow(10, length - 1)));
-    return randomNo;
-  }
 
 
 

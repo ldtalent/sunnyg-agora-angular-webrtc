@@ -1,7 +1,3 @@
-# About
-
-packages used-
-npm i agora-rtc-sdk-ng
 
 # VideoApp
 
