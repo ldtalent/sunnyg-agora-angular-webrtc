@@ -30,7 +30,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 # Agora Video  Meeting SDK NG
 
-[![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/angulardevelopment/video-app?logo=github&style=social)](https://github.com/angulardevelopment/) [![GitHub last commit](https://img.shields.io/github/last-commit/angulardevelopment/video-app?style=social&logo=git)](https://github.com/angulardevelopment/) [![GitHub stars](https://img.shields.io/github/stars/angulardevelopment/video-app?style=social)](https://github.com/angulardevelopment/video-app/stargazers) [![GitHub forks](https://img.shields.io/github/forks/angulardevelopment/video-app?style=social&logo=git)](https://github.com/angulardevelopment/video-app/network)
+[![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/learningdollars/sunnyg-agora-angular-webrtc?logo=github&style=social)](https://github.com/learningdollars/) [![GitHub last commit](https://img.shields.io/github/last-commit/learningdollars/sunnyg-agora-angular-webrtc?style=social&logo=git)](https://github.com/learningdollars/) [![GitHub stars](https://img.shields.io/github/stars/learningdollars/sunnyg-agora-angular-webrtc?style=social)](https://github.com/learningdollars/sunnyg-agora-angular-webrtc/stargazers) [![GitHub forks](https://img.shields.io/github/forks/learningdollars/sunnyg-agora-angular-webrtc?style=social&logo=git)](https://github.com/learningdollars/sunnyg-agora-angular-webrtc/network)
 
 Video  Meeting using the Agora Web SDK NG.
 
@@ -42,7 +42,7 @@ Video  Meeting using the Agora Web SDK NG.
 
 ![Generic badge](https://img.shields.io/badge/Voice-Call-orange) 
 
-#### Link for [demo](#) 
+#### Link for [demo](http://localhost:4200/user/1) 
 [![Generic badge](https://img.shields.io/badge/view-demo-orange)](#)
 
 ## Useful Links
@@ -54,7 +54,7 @@ Video  Meeting using the Agora Web SDK NG.
 
 ## Requirements
 
-[![GitHub top language](https://img.shields.io/github/languages/top/angulardevelopment/video-app?logo=html&style=social)](https://github.com/angulardevelopment/)
+[![GitHub top language](https://img.shields.io/github/languages/top/learningdollars/sunnyg-agora-angular-webrtc?logo=html&style=social)](https://github.com/angulardevelopment/)
 
 The source code of this project is written in **`HTML`, `CSS`, `JavaScript`,`Angular`,`TS` and the `Agora SDK NG`**. So, you would require the Agora SDK NG and a valid App Id to run this project.
 
@@ -72,7 +72,7 @@ Feel free to contact me via [Facebook](#).
 
 Invite me to connect on [LinkedIn](#).
 
-[![Facebook](https://img.shields.io/badge/Facebook-add-blue.svg?logo=facebook&logoColor=white)](#) [![Quora](https://img.shields.io/badge/Quora-ask-red.svg?logo=quora)](#) [![Instagram](https://img.shields.io/badge/Instagram-follow-purple.svg?logo=instagram&logoColor=white)](#) [![Snapchat](https://img.shields.io/badge/Snapchat-add-yellow.svg?logo=snapchat&logoColor=white)](#) [![Medium](https://img.shields.io/badge/Medium-follow-black.svg?logo=medium&logoColor=white)](#)
+[![Facebook](https://img.shields.io/badge/Facebook-add-blue.svg?logo=facebook&logoColor=white)](#) [![Quora](https://img.shields.io/badge/Quora-ask-red.svg?logo=quora)](#) [![Instagram](https://img.shields.io/badge/Instagram-follow-purple.svg?logo=instagram&logoColor=white)](#) [![Snapchat](https://img.shields.io/badge/Snapchat-add-yellow.svg?logo=snapchat&logoColor=white)](#) [![Medium](https://img.shields.io/badge/Medium-follow-black.svg?logo=medium&logoColor=white)](https://eraoftech.medium.com/)
 
 
 ```bash
@@ -113,7 +113,7 @@ ______      _               _   _               _
 
 **MIT &copy; [Sunny](https://github.com/angulardevelopment/video-app/blob/master/LICENSE)**
 
-[![GitHub license](https://img.shields.io/github/license/angulardevelopment/video-app?style=social&logo=github)](https://github.com/angulardevelopment/video-app/blob/master/LICENSE) [![Twitter Follow](https://img.shields.io/twitter/follow/Sunny_g001?style=social)](#)
+[![GitHub license](https://img.shields.io/github/license/learningdollars/sunnyg-agora-angular-webrtc?style=social&logo=github)](https://github.com/angulardevelopment/video-app/blob/master/LICENSE) [![Twitter Follow](https://img.shields.io/twitter/follow/Sunny_g001?style=social)](#)
 
 ---------
 
